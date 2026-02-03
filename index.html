@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sinais de Infidelidade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #050505;
+        color: #ffffff;
+      }
+      .glow-red {
+        box-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
+      }
+      .text-glow {
+        text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+      }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script defer>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1581863429632190');
+    fbq('track', 'PageView');
+
+    // Scroll Depth Tracking
+    (function() {
+        var scrollMarks = {25: false, 50: false, 75: false, 100: false};
+        function getScrollPercent() {
+            var h = document.documentElement,
+                b = document.body,
+                st = 'scrollTop',
+                sh = 'scrollHeight';
+            return Math.round((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100);
+        }
+        function checkScrollDepth() {
+            var percent = getScrollPercent();
+            if (percent >= 25 && !scrollMarks[25]) {
+                scrollMarks[25] = true;
+                fbq('trackCustom', 'ScrollDepth', {depth: '25%'});
+            }
+            if (percent >= 50 && !scrollMarks[50]) {
+                scrollMarks[50] = true;
+                fbq('trackCustom', 'ScrollDepth', {depth: '50%'});
+            }
+            if (percent >= 75 && !scrollMarks[75]) {
+                scrollMarks[75] = true;
+                fbq('trackCustom', 'ScrollDepth', {depth: '75%'});
+            }
+            if (percent >= 100 && !scrollMarks[100]) {
+                scrollMarks[100] = true;
+                fbq('trackCustom', 'ScrollDepth', {depth: '100%'});
+            }
+        }
+        window.addEventListener('scroll', checkScrollDepth);
+        window.addEventListener('load', checkScrollDepth);
+    })();
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Script de UTMs Hotmart -->
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+  <body>
+    <!-- Meta Pixel Code (Noscript) -->
+    <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1581863429632190&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code (Noscript) -->
+
+    <div id="root"></div>
+  </body>
+</html>
