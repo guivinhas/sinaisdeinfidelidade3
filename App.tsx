@@ -90,7 +90,7 @@ const App: React.FC = () => {
       name: "Marina",
       age: "31",
       location: "Curitiba",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150"
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150"
     },
     {
       text: (
@@ -101,7 +101,7 @@ const App: React.FC = () => {
       name: "Ricardo",
       age: "35",
       location: "São Paulo",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150"
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150"
     },
     {
       text: (
@@ -112,7 +112,7 @@ const App: React.FC = () => {
       name: "Juliana",
       age: "28",
       location: "BH",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150"
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150"
     }
   ];
 
@@ -266,6 +266,9 @@ const App: React.FC = () => {
                 <img 
                   src={t.image} 
                   alt={t.name}
+                  loading="lazy"
+                  width="40"
+                  height="40"
                   className="w-10 h-10 rounded-full object-cover border border-zinc-700"
                 />
                 <div className="text-left">
@@ -283,10 +286,13 @@ const App: React.FC = () => {
         <div className="max-w-4xl mx-auto bg-[#111] rounded-xl border border-zinc-800 p-6 md:p-10 flex flex-col md:flex-row items-center gap-8">
           <div className="shrink-0">
              <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-zinc-800 shadow-xl">
-               {/* DICA: Se o base64 for muito grande, hospede a imagem no 'imgur.com' e cole o link direto aqui em baixo no src="" */}
                <img 
                  src="https://i.imgur.com/E69qFYw.jpeg" 
-                 alt="Dr. Carlos Eduardo Ferraz" 
+                 alt="Dr. Carlos Eduardo Ferraz"
+                 loading="lazy"
+                 width="192"
+                 height="192"
+                 decoding="async"
                  className="w-full h-full object-cover"
                />
              </div>
