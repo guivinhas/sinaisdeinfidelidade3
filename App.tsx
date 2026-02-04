@@ -241,8 +241,51 @@ const App: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className="mt-12">
-          <Button text="Quero o guia completo — R$ 27" />
+        {/* Button removed from here */}
+      </section>
+
+      {/* Micro-Proof Section */}
+      <section className="py-8 px-4 bg-[#050505]">
+        <div className="max-w-4xl mx-auto">
+            {/* The Card */}
+            <div className="bg-[#111] border border-zinc-800/50 rounded-lg p-6 flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+                
+                <div className="flex items-center gap-4 text-center md:text-left">
+                    <div className="hidden md:block bg-zinc-900 p-3 rounded-full">
+                        <Icons.Social className="text-zinc-400" size={24} />
+                    </div>
+                    <div>
+                        <p className="text-white font-bold text-lg flex items-center gap-2 justify-center md:justify-start">
+                          <span className="md:hidden">🔒</span> 50.000+
+                        </p>
+                        <p className="text-zinc-500 text-xs uppercase tracking-wide">Leitores usaram o método</p>
+                    </div>
+                </div>
+
+                <div className="h-px w-full md:w-px md:h-12 bg-zinc-800"></div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-sm">
+                    <div className="flex items-center gap-2 text-zinc-300 justify-center md:justify-start">
+                        <span>📘</span> Leitura discreta • Acesso imediato
+                    </div>
+                    <div className="flex items-center gap-2 text-zinc-300 justify-center md:justify-start">
+                        <span>🧠</span> Funciona para homens e mulheres
+                    </div>
+                    <div className="flex items-center gap-2 text-zinc-300 md:col-span-2 justify-center md:justify-start">
+                        <span className="shrink-0">💬</span>
+                        <span className="text-left leading-tight">Serve tanto para confirmar quanto para<br className="block md:hidden"/> descartar suspeitas</span>
+                    </div>
+                </div>
+            </div>
+
+            {/* The Button moved here */}
+            <div>
+              <Button text="Quero parar de imaginar as coisas e ter certeza — R$ 27" />
+              <p className="text-center text-zinc-500 text-xs mt-3 font-medium">
+                🔒 Leitura discreta • Sem exposição • Você decide o que fazer com a informação
+              </p>
+            </div>
+
         </div>
       </section>
 
